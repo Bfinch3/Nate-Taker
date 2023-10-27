@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const app = express();
-const PORT = 3001;
+const PORT = process.env.port || 3001;
 const db_data = require('./db/db.json')
 const generateUniqueId = require('generate-unique-id');
 //Middleware, set the request to return as json and settng the public folder
